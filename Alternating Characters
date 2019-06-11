@@ -1,0 +1,13 @@
+tc = int(input())
+for _ in range(0,tc):
+    str1 = input()
+    
+    count = 0
+    for i in range(0,len(str1)-1):
+        if str1[i] == 'A':
+            if str1[i+1] != 'B':
+                count += 1
+        elif str1[i] == 'B':
+            if str1[i+1] != 'A':
+                count += 1 
+    print(count)
