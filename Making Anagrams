@@ -1,0 +1,20 @@
+s1 = input()
+s2 = input()
+count = 0
+l1 = list(dict.fromkeys(s1))
+l2 = list(dict.fromkeys(s2))
+for item in l1:
+    if item in l2:
+        l2 .remove(item)
+#print(l1)
+#print(l2)
+
+for items in l1:
+    #print(items + ":",s1.count(items),s2.count(items),end=' ')
+    count += abs(s1.count(items)-s2.count(items))
+    #print('count:',count)
+for items in l2:
+    #print(items + ":",s1.count(items),s2.count(items),end=' ')
+    count += abs(s1.count(items)-s2.count(items))
+    #print('count:',count)
+print(count)
