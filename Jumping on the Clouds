@@ -1,0 +1,15 @@
+s = int(input())
+list1 = list(map(int, input().split()))
+jumps = 0
+i=0
+while i < s-2:
+    if list1[i+2] == 1:
+        jumps += 1
+        i+=1     
+    else:
+        jumps += 1
+        i+=2
+    #print('item:',list1[i],'jumps:',jumps,'i:',i)
+if i != s-1:
+    jumps+=1
+print(jumps)
