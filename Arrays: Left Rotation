@@ -1,0 +1,6 @@
+n, s = list(map(int,input().split()))
+list1 =  list(map(int,input().split()))
+if n<s:
+    s = s%n
+list2 = list1[s:n]+list1[:s]
+print(*list2)
