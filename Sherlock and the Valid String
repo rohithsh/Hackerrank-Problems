@@ -1,0 +1,17 @@
+str1 = input()
+l1 = list(dict.fromkeys(str1))
+dict1 = {}
+for items in l1:
+    dict1[items] = str1.count(items)
+temp = dict1[l1[0]]
+count1 = 0
+#print(temp)
+#print(dict1)
+for i in range(1,len(l1)):
+    if temp != dict1[l1[i]]:
+        count1 += 1
+#print(count1,len(l1))
+if count1==0 or count1==1:
+    print('YES')
+else:
+    print('NO')
