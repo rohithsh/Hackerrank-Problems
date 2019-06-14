@@ -1,0 +1,16 @@
+from bisect import bisect
+
+def triplets(a, b, c):
+    #print(a,b,c, sep='\n')
+    a, b, c = sorted(set(a)), set(b), sorted(set(c))
+    #print(a,b,c, sep='\n')
+    #print((bisect(a,x) for x in b))
+    #print(*(bisect(c, x) for x in b))
+    return sum((bisect(a, x) * bisect(c, x) for x in b))
+
+m,n,o = list(map(int,input().split()))
+arr1 = set(map(int,input().split()))
+arr2 = set(map(int,input().split()))
+arr3 = set(map(int,input().split()))
+count = triplets(arr1,arr2,arr3)
+print(count)
